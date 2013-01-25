@@ -1,20 +1,34 @@
 #!/usr/bin/python
 
-# Define imports
+# {{{ Define imports
 from gi.repository import Gtk
+from config import EdenReaderConfig
+# }}}
 
 class EdenReader:
 
-    def __init__(self):
-        # Define our variables
+    def __init__(self): # {{{
+        self.CreateWindow()
+    # }}}
+
+    def CreateWindow(self): # {{{
+        print "Create the main window"
+
         window = Gtk.Window();
 
-        # Add eventhandlers
+        # Set eventhandlers
         window.connect("delete-event", Gtk.main_quit)
 
-        # And don't forget to actually show the window
+        # Set some generic info on the window
+        window.set_title("Eden Reader")
+
+        # Show the window
         window.show()
 
+    # }}}
+
 EdenReader()
+
+# Get into the GTK loop
 Gtk.main()
 
