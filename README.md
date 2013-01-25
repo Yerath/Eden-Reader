@@ -1,1 +1,1 @@
-This looks like a readme, doesn't it? :3
+This project is designed to learn Python with.

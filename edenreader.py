@@ -1,23 +1,20 @@
 #!/usr/bin/python
 
 # Define imports
-import gtk
+from gi.repository import Gtk
 
 class EdenReader:
 
-    def Close(self, widget):
-        gtk.main_quit()
-    
     def __init__(self):
         # Define our variables
-        window = gtk.Window();
+        window = Gtk.Window();
 
         # Add eventhandlers
-        window.connect("destroy", self.Close)
+        window.connect("delete-event", Gtk.main_quit)
 
         # And don't forget to actually show the window
         window.show()
 
 EdenReader()
-gtk.main()
+Gtk.main()
 
