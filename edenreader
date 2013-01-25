@@ -1,0 +1,25 @@
+#!/usr/bin/python
+
+# {{{ Define imports
+import json
+from gi.repository import Gtk
+
+from lib.config import EdenReaderConfig
+from lib.window import EdenReaderWindow
+from lib.mangalist import EdenReaderMangalist
+# }}}
+
+class EdenReader:
+
+    def __init__(self): # {{{
+
+        self.w = EdenReaderWindow()
+        self.w.Create()
+
+    # }}}
+
+EdenReader()
+
+# Get into the GTK loop
+Gtk.main()
+
